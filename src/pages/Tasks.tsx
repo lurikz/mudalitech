@@ -18,7 +18,7 @@ export default function Tasks() {
   const { user } = useAuth();
   const { toast } = useToast();
   const [tasks, setTasks] = useState<(Tables<'tasks'> & { lead_name?: string })[]>([]);
-  const [leads, setLeads] = useState<Tables<'leads'>[]>([]);
+  const [leads, setLeads] = useState<{ id: string; name: string }[]>([]);
   const [dialogOpen, setDialogOpen] = useState(false);
   const [filter, setFilter] = useState<string>('all');
   const [form, setForm] = useState({ title: '', description: '', due_date: '', lead_id: '', priority: 'medium' });
